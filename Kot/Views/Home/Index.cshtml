@@ -1,8 +1,22 @@
-﻿@{
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@using Kot.Models.Home
+
+@inject IViewLocalizer Localizer
+@model IndexViewModel
+
+@{
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+    <div class="text-center">
+
+        CurrentCulture: @System.Globalization.CultureInfo.CurrentCulture.ToString()
+
+
+        <div>@Localizer["Hello"]</div>
+
+        <div class="form-group">
+            <label asp-for="Title" class="col-md-2 control-label"></label>
+        </div>
+
+    </div>

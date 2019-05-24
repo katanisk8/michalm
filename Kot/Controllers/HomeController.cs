@@ -1,18 +1,28 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using Kot.Models;
+using Microsoft.Extensions.Localization;
+using Kot.Models.Home;
 
 namespace Kot.Controllers
 {
     public class HomeController : Controller
     {
+        private readonly IStringLocalizer<HomeController> _localizer;
+
+        public HomeController(IStringLocalizer<HomeController> localizer)
+        {
+            _localizer = localizer;
+        }
+
         public IActionResult Index()
         {
-            return View();
+            var viewModel = new IndexViewModel
+            {
+                Title = "lol"
+            };
+
+            return View(viewModel);
         }
 
         public IActionResult Privacy()

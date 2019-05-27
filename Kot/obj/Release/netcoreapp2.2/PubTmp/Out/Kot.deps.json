@@ -30,6 +30,14 @@
         "runtime": {
           "Kot.dll": {}
         },
+        "resources": {
+          "en/Kot.resources.dll": {
+            "locale": "en"
+          },
+          "pl/Kot.resources.dll": {
+            "locale": "pl"
+          }
+        },
         "compile": {
           "Kot.dll": {}
         }

@@ -41,3 +41,4 @@ C:\Users\Makowej\Desktop\C#\Kot\Kot\obj\Debug\netcoreapp2.2\Kot.Resources.Views.
 C:\Users\Makowej\Desktop\C#\Kot\Kot\obj\Debug\netcoreapp2.2\Kot.csproj.GenerateResource.cache
 C:\Users\Makowej\Desktop\C#\Kot\Kot\obj\Debug\netcoreapp2.2\en\Kot.resources.dll
 C:\Users\Makowej\Desktop\C#\Kot\Kot\obj\Debug\netcoreapp2.2\pl\Kot.resources.dll
+C:\Users\Makowej\Desktop\C#\Kot\Kot\obj\Debug\netcoreapp2.2\Kot.csprojAssemblyReference.cache

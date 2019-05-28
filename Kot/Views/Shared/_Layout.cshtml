@@ -6,6 +6,7 @@
     <title>@ViewData["Title"] - Kot</title>
 
     <environment include="Development">
+        <script src="~/lib/jquery/dist/jquery.js"></script>
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
     </environment>
     <environment exclude="Development">
@@ -21,44 +22,36 @@
     <link rel="stylesheet" type="text/css" href="css/normalize.css" />
     <link rel="stylesheet" type="text/css" href="css/demo.css" />
     <link rel="stylesheet" type="text/css" href="css/component.css" />
-    <link href='http://fonts.googleapis.com/css?family=Raleway:200,400,800' rel='stylesheet' type='text/css'>
-
+    <link href='https://fonts.googleapis.com/css?family=Raleway:200,400,800' rel='stylesheet' type='text/css'>
 </head>
 <body>
     <header>
-        @*<nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white box-shadow">
-            <div class="container">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Agnieszka Trela</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
-                    <a href="?culture=pl-PL">PL</a>
-                    <a href="?culture=en-US">EN</a>
-
-                    <partial name="_LoginPartial" />
-                </div>
-            </div>
-        </nav>*@
+        
     </header>
-    <div class="">
-        <partial name="_CookieConsentPartial" />
-        <main role="main">
-            <div class="demo-1">
-                <div class="content">
-                    <div id="large-header" class="large-header">
-                        <canvas id="demo-canvas"></canvas>
-
-                        <main class="container">
-                            @RenderBody()
-                        </main>
-                    </div>                    
-                </div>                
+    <div class="demo-1">
+        <div class="content">
+            <div id="large-header" class="large-header">
+                <nav class="navbar navbar-expand-sm navbar-toggleable-sm">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                        <partial name="_LoginPartial" />
+                        <a href="?culture=pl-PL">PL</a>
+                        <a href="?culture=en-US">EN</a>
+                    </div>
+                </nav>
+                <canvas id="demo-canvas"></canvas>
+                <div class="container cookie-container">
+                    <partial name="_CookieConsentPartial" />
+                </div>
+                <main role="main" class="container">
+                    @RenderBody()
+                </main>
             </div>
-        </main>
+        </div>
     </div>
-
     <environment include="Development">
         <script src="~/lib/jquery/dist/jquery.js"></script>
         <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.js"></script>

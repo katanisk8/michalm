@@ -62,3 +62,12 @@ body {
     width: 50%;
     margin: auto;
 }
+
+.flags{
+    margin: 2px;
+    opacity: 0.7;
+}
+
+.fa.fa-navicon {
+    color: white;
+}

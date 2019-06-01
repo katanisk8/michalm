@@ -64,10 +64,16 @@ body {
 }
 
 .flags{
-    margin: 2px;
     opacity: 0.7;
 }
 
 .fa.fa-navicon {
     color: white;
+}
+
+.btn-language {
+    border: 0;
+    background: transparent;
+    margin: 2px;
+    padding: 0px;
 }

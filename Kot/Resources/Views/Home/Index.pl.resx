@@ -117,7 +117,19 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Hello" xml:space="preserve">
-    <value>Hello</value>
+  <data name="About" xml:space="preserve">
+    <value>O mnie</value>
+  </data>
+  <data name="Conferences" xml:space="preserve">
+    <value>Konferencje</value>
+  </data>
+  <data name="Grants" xml:space="preserve">
+    <value>Granty</value>
+  </data>
+  <data name="Home" xml:space="preserve">
+    <value>Start</value>
+  </data>
+  <data name="Publications" xml:space="preserve">
+    <value>Publikacje</value>
   </data>
 </root>

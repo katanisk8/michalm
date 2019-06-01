@@ -1,0 +1,24 @@
+﻿@using Microsoft.AspNetCore.Builder
+@using Microsoft.AspNetCore.Localization
+@using Microsoft.AspNetCore.Mvc.Localization
+@using Microsoft.Extensions.Options
+
+@inject IViewLocalizer Localizer
+@inject IOptions<RequestLocalizationOptions> LocOptions
+
+@{
+    var requestCulture = Context.Features.Get<IRequestCultureFeature>();
+}
+
+<div title="@Localizer["Request culture provider:"] @requestCulture?.Provider?.GetType().Name">
+    <form id="selectLanguage" asp-controller="Home" asp-action="SetLanguage" asp-route-returnUrl="@Context.Request.Path" method="post" class="form-horizontal" role="form">
+
+        <button type="submit" name="culture" value="en-US" class="btn-language">
+            <img class="flags" src="~/img/united-kingdom.png" />
+        </button>
+        <button type="submit" name="culture" value="pl-Pl" class="btn-language">
+            <img class="flags" src="~/img/poland.png" />
+        </button>
+
+    </form>
+</div>

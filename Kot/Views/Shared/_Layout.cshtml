@@ -39,14 +39,9 @@
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                             aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
-                    </button>
+                    </button>   
                     <div class="navbar-collapse collapse d-sm-inline-flex">
-                        <a href="?culture=pl-PL">
-                            <img class="flags" src="~/img/poland.png" />
-                        </a>
-                        <a href="?culture=en-US">
-                            <img class="flags" src="~/img/united-kingdom.png" />
-                        </a>
+                        @await Html.PartialAsync("_SelectLanguagePartial")
                     </div>
                     <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
                         <partial name="_LoginPartial" />

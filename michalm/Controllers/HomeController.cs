@@ -6,6 +6,8 @@ using Kot.Models.Home;
 using Microsoft.AspNetCore.Localization;
 using Microsoft.AspNetCore.Http;
 using System;
+using Microsoft.Extensions.Logging;
+using System.Globalization;
 
 namespace Kot.Controllers
 {
@@ -21,6 +23,11 @@ namespace Kot.Controllers
         public IActionResult Index()
         {
             var viewModel = new IndexViewModel { };
+            viewModel.Title = _localizer["Home"].Value;
+
+            IStringLocalizer polishLocalizer = _localizer.WithCulture(new CultureInfo("pl-Pl"));
+
+            var title = polishLocalizer["Home"].Value;
 
             return View(viewModel);
         }
@@ -41,9 +48,9 @@ namespace Kot.Controllers
         {
             Response.Cookies.Append(
                 CookieRequestCultureProvider.DefaultCookieName,
-                CookieRequestCultureProvider.MakeCookieValue(new RequestCulture(culture)),
-                new CookieOptions { Expires = DateTimeOffset.UtcNow.AddYears(1) }
+                CookieRequestCultureProvider.MakeCookieValue(new RequestCulture(culture)), new CookieOptions { Expires = DateTimeOffset.UtcNow.AddYears(1) }
             );
+
 
             return LocalRedirect(returnUrl);
         }

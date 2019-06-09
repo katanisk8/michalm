@@ -58,9 +58,17 @@ body {
     letter-spacing: 0.1em;
 }
 
-.cookie-container{
-    width: 50%;
-    margin: auto;
+.cookie-container {
+    width: 30%;
+    position: absolute;
+    padding: 0;
+    color: #f9f1e9;
+    text-align: left;
+    top: 6%;
+    left: 82%;
+    -webkit-transform: translate3d(-50%,-50%,0);
+    transform: translate3d(-50%,-50%,0);
+    opacity: 0.6;
 }
 
 .flags{
